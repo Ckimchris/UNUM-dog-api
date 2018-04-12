@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import {Card, CardHeader, CardMedia} from 'material-ui/Card';
 
 class FeedItem extends Component {
   render() {
-    let url = this.props.urls;
     return (
     <div>
         <Card>
@@ -13,7 +11,7 @@ class FeedItem extends Component {
                 subtitle="Shiba"
             />
             <CardMedia>
-                <img src = {this.props.url}/>
+                <img src = {this.props.url} alt="feed images"/>
             </CardMedia>
         </Card>
         <br></br>

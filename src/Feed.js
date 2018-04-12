@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FeedItem from './FeedItem';
-import { CSSTransition } from 'react-transition-group';
 
 class Feed extends Component {
   constructor() {
@@ -13,7 +12,7 @@ class Feed extends Component {
   componentDidMount() {
     let xhttp = new XMLHttpRequest();
 	  xhttp.onreadystatechange = () => {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
+		if (xhttp.readyState === 4 && xhttp.status === 200) {
             let data = JSON.parse(xhttp.responseText)
             this.setState({urls: data.message})        
 		};
